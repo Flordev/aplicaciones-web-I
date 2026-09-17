@@ -10,13 +10,6 @@ body {
     color: #3F342B;
 }
 
-h1,
-h2,
-h3 {
-    font-family: "Questrial", sans-serif;
-    font-weight: 700;
-}
-
 
 /* =========================
    NAVBAR
@@ -127,12 +120,6 @@ nav {
 
 .banner-texto {
     max-width: 800px;
-}
-
-.banner-texto p {
-    font-size: 14px;
-    letter-spacing: 5px;
-    margin-bottom: 20px;
 }
 
 .banner-texto h1 {
@@ -398,11 +385,6 @@ footer {
     margin-bottom: 50px;
 }
 
-.titulo-catalogo p {
-    font-size: 13px;
-    letter-spacing: 4px;
-    margin-bottom: 12px;
-}
 
 .titulo-catalogo h1 {
     font-family: "Montserrat", sans-serif;
