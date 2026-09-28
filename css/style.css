@@ -380,48 +380,78 @@ footer {
 
 .catalogo {
     min-height: calc(100vh - 75px);
-    padding: 70px 40px;
+
+    padding: 80px 60px;
+
     background-color: #f4eee7;
 }
 
+
+/* TÍTULO */
+
 .titulo-catalogo {
     text-align: center;
-    margin-bottom: 50px;
-}
 
+    margin-bottom: 60px;
+}
 
 .titulo-catalogo h1 {
     font-family: "Montserrat", sans-serif;
-    font-size: 32px;
+
+    font-size: 42px;
     font-weight: 800;
 
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .titulo-catalogo span {
     font-family: "Cormorant Garamond", serif;
-    font-size: 22px;
+
+    font-size: 26px;
     font-style: italic;
 }
 
+
+/* PRODUCTOS */
+
 .productos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
 
-    max-width: 1100px;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 35px;
+
+    max-width: 1200px;
+
     margin: 0 auto;
 }
+
+
+/* CARD */
 
 .card {
     background-color: #e9dccb;
 
-    border-radius: 8px;
+    border-radius: 12px;
+
     overflow: hidden;
+
+    min-height: 520px;
+
+    box-shadow: 0 8px 20px rgba(63, 52, 43, 0.12);
+
+    transition: transform 0.2s ease;
 }
 
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* IMAGEN */
+
 .card-imagen {
-    height: 300px;
+    height: 330px;
 
     display: flex;
     align-items: center;
@@ -431,28 +461,87 @@ footer {
 }
 
 .card-imagen span {
-    font-size: 14px;
+    font-size: 16px;
+    color: #6B5543;
 }
 
+
+/* INFORMACIÓN */
+
 .card-info {
-    padding: 25px;
+    padding: 30px;
 }
 
 .card-info h2 {
-    font-size: 21px;
-    font-weight: 500;
-    margin-bottom: 8px;
+    font-size: 24px;
+
+    font-weight: 600;
+
+    margin-bottom: 12px;
+
+    text-align: center;
 }
 
 .card-info p {
-    font-size: 14px;
-    margin-bottom: 15px;
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    margin-bottom: 18px;
+
+    text-align: center;
 }
 
 .card-info strong {
-    font-size: 18px;
+    display: block;
+
+    font-size: 23px;
+
+    margin-bottom: 25px;
+
+    text-align: center;
 }
 
+
+/* CANTIDAD */
+
+.cantidad {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.cantidad button {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #3F342B;
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+.cantidad button:hover {
+    background-color: #8B5E3C;
+}
+
+.cantidad-producto {
+    min-width: 30px;
+
+    text-align: center;
+
+    font-size: 18px;
+    font-weight: 600;
+}
 
 /* =========================
    FORMULARIOS
