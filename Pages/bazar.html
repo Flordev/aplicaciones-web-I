@@ -33,33 +33,7 @@
          NAVBAR
          ========================= -->
 
-    <nav>
-
-        <div class="nav-logo">
-
-            <strong>GOHAN MATES</strong>
-
-        </div>
-
-
-        <div class="nav-centro">
-
-            <a href="../index.html">INICIO</a>
-            <a href="mates.html">MATES</a>
-            <a href="accesorios.html">ACCESORIOS</a>
-            <a href="bazar.html">BAZAR</a>
-
-        </div>
-
-
-        <div class="nav-usuario">
-
-            <a href="login.html">INICIAR SESIÓN</a> 
-            <a href="registro.html">REGISTRARSE</a>
-
-        </div>
-
-    </nav>
+   <div id="navbar"></div>
 
 
     <!-- =========================
@@ -81,33 +55,7 @@
 
         <!-- PRODUCTOS -->
 
-        <div class="productos">
-
-            <!-- CARD DE PRODUCTO -->
-
-            <div class="card">
-
-                <div class="card-imagen">
-
-                    <span>Imagen del producto</span>
-
-                </div>
-
-
-                <div class="card-info">
-
-                    <h2>Producto de bazar</h2>
-
-                    <p>
-                        Un detalle para acompañar tus momentos.
-                    </p>
-
-                    <strong>$10.000</strong>
-
-                </div>
-
-            </div>
-
+         <div class="productos" id="productos"></div>
         </div>
 
     </section>
@@ -182,6 +130,43 @@
         </div>
 
     </footer>
+
+    <script type="module">
+
+
+    import crearNavbar, { configurarLogout } from "../js/components/navbar.js";
+
+    const navbar = document.getElementById("navbar");
+
+    navbar.innerHTML = crearNavbar();
+
+    configurarLogout();
+
+</script>
+
+    <!-- CARD -->
+
+    <script type="module">
+
+    import crearCard, { configurarCantidad } from "../js/components/card.js";
+
+    const productos = document.getElementById("productos");
+
+    const producto = {
+
+        titulo: "Producto de bazar",
+
+        descripcion: "Un detalle para acompañar tus momentos.",
+
+        precio: 10000
+
+    };
+
+    productos.innerHTML = crearCard(producto);
+
+    configurarCantidad();
+
+</script>
 
 </body>
 

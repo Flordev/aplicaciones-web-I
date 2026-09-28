@@ -33,31 +33,7 @@
          NAVBAR
          ========================= -->
 
-    <nav>
-
-        <div class="nav-logo">
-            <strong>GOHAN MATES</strong>
-        </div>
-
-
-        <div class="nav-centro">
-
-            <a href="../index.html">INICIO</a>
-            <a href="mates.html">MATES</a>
-            <a href="accesorios.html">ACCESORIOS</a>
-            <a href="bazar.html">BAZAR</a>
-
-        </div>
-
-
-        <div class="nav-usuario">
-
-            <a href="login.html">INICIAR SESIÓN</a> 
-            <a href="registro.html">REGISTRARSE</a>
-
-        </div>
-
-    </nav>
+    <div id="navbar"></div>
 
 
     <!-- =========================
@@ -79,34 +55,7 @@
 
         <!-- PRODUCTOS -->
 
-        <div class="productos">
-
-            <!-- CARD DE PRODUCTO -->
-
-            <div class="card">
-
-                <div class="card-imagen">
-
-                    <span>Imagen del producto</span>
-
-                </div>
-
-
-                <div class="card-info">
-
-                    <h2>Mate personalizado</h2>
-
-                    <p>
-                        Mate con grabado láser.
-                    </p>
-
-                    <strong>$15.000</strong>
-
-                </div>
-
-            </div>
-
-        </div>
+        <div class="productos" id="productos"></div>
 
     </section>
 
@@ -180,6 +129,50 @@
         </div>
 
     </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+         ========================= -->
+
+    <!-- NAVBAR -->
+
+    <script type="module">
+
+        import crearNavbar, { configurarLogout } from "../js/components/navbar.js";
+
+        const navbar = document.getElementById("navbar");
+
+        navbar.innerHTML = crearNavbar();
+
+        configurarLogout();
+
+    </script>
+
+
+    <!-- CARD -->
+
+   <script type="module">
+
+    import crearCard, { configurarCantidad } from "../js/components/card.js";
+
+    const productos = document.getElementById("productos");
+
+    const producto = {
+
+        titulo: "Mate personalizado",
+
+        descripcion: "Mate con grabado láser.",
+
+        precio: 15000
+
+    };
+
+    productos.innerHTML = crearCard(producto);
+
+    configurarCantidad();
+
+</script>
 
 </body>
 

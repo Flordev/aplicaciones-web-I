@@ -33,33 +33,7 @@
          NAVBAR
          ========================= -->
 
-    <nav>
-
-        <div class="nav-logo">
-
-            <strong>GOHAN MATES</strong>
-
-        </div>
-
-
-        <div class="nav-centro">
-
-            <a href="../index.html">INICIO</a>
-            <a href="mates.html">MATES</a>
-            <a href="accesorios.html">ACCESORIOS</a>
-            <a href="bazar.html">BAZAR</a>
-
-        </div>
-
-
-        <div class="nav-usuario">
-
-            <a href="login.html">INICIAR SESIÓN</a> 
-            <a href="registro.html">REGISTRARSE</a>
-
-        </div>
-
-    </nav>
+    <div id="navbar"></div>
 
 
     <!-- =========================
@@ -176,6 +150,18 @@
         </div>
 
     </footer>
+
+    <script type="module">
+
+    import crearNavbar, { configurarLogout } from "../js/components/navbar.js";
+
+    const navbar = document.getElementById("navbar");
+
+    navbar.innerHTML = crearNavbar();
+
+    configurarLogout();
+    
+    </script>
 
 </body>
 
