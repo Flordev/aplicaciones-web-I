@@ -92,6 +92,7 @@ nav {
     font-weight: 500;
 
     border: 1px solid #ffffff;
+    border-radius: 6px;
 }
 
 .nav-usuario a:hover {
@@ -163,6 +164,8 @@ nav {
     color: #ffffff;
 
     text-decoration: none;
+
+    border-radius: 8px;
 }
 
 .seccion-home p {
@@ -363,6 +366,7 @@ footer {
     font-size: 30px;
 
     border: 1px solid #ffffff;
+    border-radius: 6px;
 }
 
 .footer-redes a:hover {
@@ -411,6 +415,9 @@ footer {
 
 .card {
     background-color: #e9dccb;
+
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .card-imagen {
@@ -490,7 +497,7 @@ footer {
     margin-bottom: 20px;
 
     border: 1px solid #c9b9a7;
-    border-radius: 3px;
+    border-radius: 6px;
 
     background-color: #ffffff;
 }
@@ -499,7 +506,7 @@ footer {
     padding: 12px;
 
     border: none;
-    border-radius: 3px;
+    border-radius: 6px;
 
     background-color: #3F342B;
     color: #f4eee7;
