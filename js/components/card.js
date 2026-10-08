@@ -4,7 +4,7 @@ function crearCard(producto) {
         <div class="card">
 
             <div class="card-imagen">
-                <span>Imagen del producto</span>
+                <img src="${producto.imagen}" alt="${producto.titulo}">
             </div>
 
             <div class="card-info">

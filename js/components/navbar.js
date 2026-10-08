@@ -25,7 +25,7 @@ function crearNavbar(esInicio = false) {
         <nav>
 
             <div class="nav-logo">
-                <strong>GOHAN MATES</strong>
+             <img src="${esInicio ? "assets/logo.png" : "../assets/logo.png"}" alt="Gohan Mates">
             </div>
 
             <div class="nav-centro">

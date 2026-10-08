@@ -37,6 +37,11 @@ nav {
     color: #ffffff;
 }
 
+.nav-logo img {
+    height: 50px;
+    width: auto;
+}
+
 .nav-logo span {
     font-size: 24px;
 }
@@ -458,6 +463,12 @@ footer {
     justify-content: center;
 
     background-color: #ded0be;
+}
+
+.card-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card-imagen span {
