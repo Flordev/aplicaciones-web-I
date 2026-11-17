@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -29,18 +30,18 @@
 
 <body>
 
-    <!-- =========================
-         NAVBAR
-         ========================= -->
+    <!-- NAVBAR -->
 
- <div id="navbar"></div>
+    <div id="navbar"></div>
 
 
-    <!-- =========================
-         BANNER PRINCIPAL
-         ========================= -->
+    <!-- BANNER PRINCIPAL -->
 
     <section class="banner">
+
+        <div class="banner-imagen banner-imagen-izquierda">
+            <img src="assets/mate.jpg" alt="Mate Gohan Mates">
+        </div>
 
         <div class="banner-texto">
 
@@ -52,29 +53,16 @@
 
         </div>
 
+        <div class="banner-imagen banner-imagen-derecha">
+            <img src="assets/mate.jpg" alt="Mates Gohan Mates">
+        </div>
+
     </section>
 
 
-    <!-- =========================
-         SECCIONES DESTACADAS
-         ========================= -->
+    <!-- SOBRE NOSOTROS -->
 
     <section class="secciones-home">
-
-        <a href="pages/mates.html" class="seccion-home">
-
-            <div>
-
-                <p>DESCUBRÍ</p>
-
-                <h2>Destacados</h2>
-
-                <span>Ver productos →</span>
-
-            </div>
-
-        </a>
-
 
         <a href="pages/sobrenosotros.html" class="seccion-home">
 
@@ -93,13 +81,9 @@
     </section>
 
 
-    <!-- =========================
-         FOOTER
-         ========================= -->
+    <!-- FOOTER -->
 
     <footer>
-
-        <!-- UBICACIÓN Y MAPA -->
 
         <div class="footer-ubicacion">
 
@@ -111,11 +95,10 @@
 
             </div>
 
-
             <div class="footer-mapa">
 
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217954.95851321027!2d-64.35480037663285!3d-31.399073368027178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses!2sar!4v1789484940051!5m2!1ses!2sar"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217954.95851321027!2d-64.35480037663285!3d-31.399073368027178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!5e0!3m2!1ses!2sar!4v1789484940051!5m2!1ses!2sar"
                     loading="lazy"
                     referrerpolicy="strict-origin-when-cross-origin">
                 </iframe>
@@ -124,9 +107,6 @@
 
         </div>
 
-
-        <!-- COPYRIGHT -->
-
         <div class="footer-copy">
 
             <p>© 2026 Gohan Mates.</p>
@@ -134,49 +114,24 @@
 
         </div>
 
-
-        <!-- REDES SOCIALES -->
-
         <div class="footer-redes">
 
-            <a
-                href="#"
-                target="_blank"
-                aria-label="Instagram">
-
+            <a href="#" target="_blank" aria-label="Instagram">
                 <i class="fa-brands fa-instagram"></i>
-
             </a>
 
-
-            <a
-                href="#"
-                target="_blank"
-                aria-label="WhatsApp">
-
+            <a href="#" target="_blank" aria-label="WhatsApp">
                 <i class="fa-brands fa-whatsapp"></i>
-
             </a>
 
         </div>
 
     </footer>
 
-       <!-- =========================
-         JAVASCRIPT
-         ========================= -->
 
-    <script type="module">
+    <!-- JAVASCRIPT -->
 
-        import crearNavbar, { configurarLogout } from "./js/components/navbar.js";
-
-        const navbar = document.getElementById("navbar");
-
-        navbar.innerHTML = crearNavbar(true);
-
-        configurarLogout();
-
-    </script>
+    <script type="module" src="js/index.js"></script>
 
 </body>
 

@@ -106,6 +106,7 @@ nav {
 }
 
 
+
 /* =========================
    BANNER PRINCIPAL - HOME
    ========================= */
@@ -117,6 +118,8 @@ nav {
     align-items: center;
     justify-content: center;
 
+    gap: 45px;
+
     text-align: center;
 
     padding: 40px 20px;
@@ -125,7 +128,7 @@ nav {
 }
 
 .banner-texto {
-    max-width: 800px;
+    max-width: 600px;
 }
 
 .banner-texto h1 {
@@ -142,35 +145,55 @@ nav {
 }
 
 
+/* CÍRCULOS CON IMÁGENES */
+
+.banner-imagen {
+    width: 400px;
+    height: 400px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 6px solid #f4eee7;
+    box-shadow: 0 8px 20px rgba(63, 52, 43, 0.15);
+}
+
+.banner-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
 /* =========================
-   SECCIONES DEL HOME
+   SECCIÓN SOBRE NOSOTROS - HOME
    ========================= */
 
 .secciones-home {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    display: flex;
+    justify-content: center;
 
-    max-width: 1100px;
-    margin: 0 auto;
-
-    padding: 70px 40px;
+    padding: 65px 20px;
 }
 
 .seccion-home {
-    min-height: 280px;
+    width: 100%;
+    max-width: 750px;
+    min-height: 230px;
 
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
     padding: 35px;
 
     background-color: #3F342B;
     color: #ffffff;
-
     text-decoration: none;
-
     border-radius: 8px;
+    transition: background-color 0.3s;
 }
 
 .seccion-home p {
@@ -444,6 +467,10 @@ footer {
     overflow: hidden;
 
     min-height: 520px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
 
     box-shadow: 0 8px 20px rgba(63, 52, 43, 0.12);
 
@@ -483,6 +510,10 @@ footer {
 
 .card-info {
     padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .card-info h2 {
@@ -525,6 +556,9 @@ footer {
     justify-content: center;
 
     gap: 15px;
+
+    margin-top: auto;
+    margin-bottom: 25px;
 }
 
 .cantidad button {
@@ -554,6 +588,38 @@ footer {
 
     font-size: 18px;
     font-weight: 600;
+}
+
+/* =========================
+   BOTÓN AGREGAR AL CARRITO
+   ========================= */
+
+.btn-agregar {
+    width: 100%;
+    padding: 12px 15px;
+
+
+    margin-top: 0;
+    padding-top: 15px;    background-color: #3F342B;
+    color: #ffffff;
+
+    border: 1px solid #3F342B;
+    border-radius: 5px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: all 0.3s;
+    
+}
+
+.btn-agregar:hover {
+    background-color: #8B5E3C;
+    border-color: #8B5E3C;
 }
 
 /* =========================
@@ -620,4 +686,380 @@ footer {
 
 .formulario button:hover {
     background-color: #8B5E3C;
+}
+
+.formulario form p {
+    margin-top: 15px;
+}
+
+
+
+/* =========================
+   GALERÍA DE PRODUCTOS
+   ========================= */
+
+.galeria-categoria {
+    margin: 40px 0;
+}
+
+.galeria-categoria h2 {
+    margin-bottom: 20px;
+}
+
+.galeria-productos {
+    display: flex;
+    overflow-x: auto;
+    gap: 25px;
+    padding: 10px 5px 20px;
+    scroll-behavior: smooth;
+}
+
+.galeria-productos .card {
+    flex: 0 0 280px;
+}
+
+.galeria-productos::-webkit-scrollbar {
+    height: 8px;
+}
+
+.galeria-productos::-webkit-scrollbar-thumb {
+    background: #9b8067;
+    border-radius: 10px;
+}
+
+.galeria-productos::-webkit-scrollbar-track {
+    background: #e9e1d8;
+}
+
+/* =========================
+   HOME RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .banner {
+        min-height: 550px;
+        gap: 15px;
+    }
+
+    .banner-imagen {
+        width: 100px;
+        height: 100px;
+        border-width: 4px;
+    }
+
+    .banner-texto h1 {
+        font-size: 32px;
+    }
+
+    .banner-texto span {
+        font-size: 18px;
+    }
+
+    .seccion-home {
+        min-height: 200px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .banner {
+        gap: 8px;
+        padding: 20px 10px;
+    }
+
+    .banner-imagen {
+        width: 75px;
+        height: 75px;
+    }
+
+    .banner-texto h1 {
+        font-size: 25px;
+    }
+
+    .banner-texto span {
+        font-size: 16px;
+    }
+
+}
+
+
+
+/* =========================
+   CARRITO LATERAL
+   ========================= */
+
+/* BOTÓN DEL CARRITO EN NAVBAR */
+
+.btn-carrito {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 16px;
+
+    background-color: transparent;
+    color: #ffffff;
+
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.btn-carrito:hover {
+    background-color: #8B5E3C;
+    border-color: #8B5E3C;
+}
+
+#contadorCarrito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 22px;
+    height: 22px;
+
+    padding: 0 5px;
+
+    background-color: #e9dccb;
+    color: #3F342B;
+
+    border-radius: 50%;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* FONDO OSCURO */
+
+.fondo-carrito {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.45);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.3s;
+
+    z-index: 1000;
+}
+
+.fondo-carrito.fondo-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* PANEL LATERAL */
+
+.panel-carrito {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: 420px;
+    max-width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #f4eee7;
+
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
+
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+
+    z-index: 1001;
+}
+
+.panel-carrito.carrito-abierto {
+    transform: translateX(0);
+}
+
+
+/* ENCABEZADO */
+
+.carrito-encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 25px;
+
+    background-color: #3F342B;
+    color: #ffffff;
+}
+
+.carrito-encabezado h2 {
+    font-size: 24px;
+}
+
+.carrito-encabezado button {
+    background: none;
+    border: none;
+
+    color: #ffffff;
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+
+/* LISTA DE PRODUCTOS */
+
+.lista-carrito {
+    flex: 1;
+
+    padding: 20px;
+
+    overflow-y: auto;
+}
+
+.carrito-vacio {
+    text-align: center;
+    margin-top: 40px;
+
+    font-size: 16px;
+}
+
+
+/* PRODUCTO */
+
+.carrito-producto {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #d6c8b8;
+}
+
+.carrito-producto img {
+    width: 85px;
+    height: 85px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+}
+
+.carrito-producto-info {
+    flex: 1;
+}
+
+.carrito-producto-info h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.carrito-producto-info p {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.carrito-producto-info strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.btn-eliminar {
+    background: none;
+    border: none;
+
+    color: #9b3d2e;
+
+    font-size: 13px;
+    text-decoration: underline;
+
+    cursor: pointer;
+}
+
+
+/* PIE DEL CARRITO */
+
+.carrito-pie {
+    padding: 25px;
+
+    background-color: #e9dccb;
+
+    border-top: 1px solid #d6c8b8;
+}
+
+.carrito-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    font-size: 20px;
+}
+
+.carrito-pie button {
+    width: 100%;
+
+    padding: 15px;
+
+    background-color: #3F342B;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 6px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+.carrito-pie button:hover {
+    background-color: #8B5E3C;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 480px) {
+
+    .panel-carrito {
+        width: 100%;
+    }
+
+}
+
+
+/* IGUALAR BOTONES DE LA NAVBAR */
+
+.nav-usuario a,
+.nav-usuario .btn-carrito {
+    height: 42px;
+    min-width: 145px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 16px;
+
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.btn-carrito i {
+    font-size: 23px;
 }
