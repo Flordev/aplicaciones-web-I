@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -51,7 +52,6 @@
             </span>
 
         </div>
-
 
         <!-- PRODUCTOS -->
 
@@ -150,31 +150,50 @@
     </script>
 
 
-    <!-- CARD -->
+    <!-- PRODUCTOS DESDE JSON -->
 
-   <script type="module">
+    <script type="module">
 
-    import crearCard, { configurarCantidad } from "../js/components/card.js";
+        import crearCard, { configurarCantidad, configurarCarrito } from "../js/components/card.js";
 
-    const productos = document.getElementById("productos");
+        const contenedorProductos = document.getElementById("productos");
 
-    const producto = {
+        // Obtener los productos del archivo JSON
+        fetch("../js/data/productos.json")
 
-        titulo: "Mate personalizado",
+            .then(response => response.json())
 
-        descripcion: "Mate con grabado láser.",
+            .then(data => {
 
-        precio: 15000,
+                // Filtrar únicamente los mates
+                const productosMates = data.filter(producto => {
+                    return producto.categoria === "mates";
+                });
 
-        imagen: "../assets/mate.jpg"
+                // Crear las tarjetas de productos
+                contenedorProductos.innerHTML = productosMates.map(producto => {
 
-    };
+                    producto.imagen = "../assets/" + producto.imagen;
 
-    productos.innerHTML = crearCard(producto);
+                    return crearCard(producto);
 
-    configurarCantidad();
+                }).join("");
 
-</script>
+                // Configurar los botones
+                configurarCantidad();
+                configurarCarrito();
+
+            })
+
+            .catch(error => {
+
+                console.error("Error al cargar los productos:", error);
+
+                contenedorProductos.innerHTML = "<p>No se pudieron cargar los productos.</p>";
+
+            });
+
+    </script>
 
 </body>
 

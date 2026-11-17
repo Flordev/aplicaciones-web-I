@@ -1,0 +1,171 @@
+
+[
+  {
+    "id": "P001",
+    "titulo": "Ranchero de Algarrobo",
+    "categoria": "mates",
+    "descripcion": "Mate tipo ranchero de algarrobo.",
+    "precio": 25000,
+    "imagen": "mate.jpg"
+  },
+  {
+    "id": "P002",
+    "titulo": "Imperial de Algarrobo Combinado Premium",
+    "categoria": "mates",
+    "descripcion": "Mate imperial de algarrobo combinado premium.",
+    "precio": 30000,
+    "imagen": "mate.jpg"
+  },
+  {
+    "id": "P003",
+    "titulo": "Camionero Calabaza - Virola Acero + Base de Alpaca",
+    "categoria": "mates",
+    "descripcion": "Mate camionero de calabaza con virola de acero y base de alpaca.",
+    "precio": 30000,
+    "imagen": "mate.jpg"
+  },
+  {
+    "id": "P004",
+    "titulo": "Camionero Cuero Croco Virola Lisa",
+    "categoria": "mates",
+    "descripcion": "Mate camionero con cuero croco y virola lisa.",
+    "precio": 32000,
+    "imagen": "mate.jpg"
+  },
+  {
+    "id": "P005",
+    "titulo": "Mate Galleta Nacional",
+    "categoria": "mates",
+    "descripcion": "Mate tipo galleta nacional.",
+    "precio": 20000,
+    "imagen": "mate.jpg"
+  },
+  {
+    "id": "P006",
+    "titulo": "Camionero de Calabaza Acero Liso",
+    "categoria": "mates",
+    "descripcion": "Mate camionero de calabaza con acero liso.",
+    "precio": 17000,
+    "imagen": "mate.jpg"
+  },
+  {
+    "id": "P007",
+    "titulo": "Imperial de Calabaza Virola Alpaca Cincelada Bordó",
+    "categoria": "mates",
+    "descripcion": "Mate imperial de calabaza con virola de alpaca cincelada.",
+    "precio": 32000,
+    "imagen": "mate.jpg"
+  },
+  {
+    "id": "P008",
+    "titulo": "Imperial de Calabaza Fleje - Virola Acero",
+    "categoria": "mates",
+    "descripcion": "Mate imperial de calabaza con fleje y virola de acero.",
+    "precio": 28000,
+    "imagen": "mate.jpg"
+  },
+  {
+    "id": "P009",
+    "titulo": "Imperial de Calabaza Criollo Liso + Base de Cuero",
+    "categoria": "mates",
+    "descripcion": "Mate imperial de calabaza criollo liso con base de cuero.",
+    "precio": 35000,
+    "imagen": "mate.jpg"
+  },
+  {
+    "id": "P022",
+    "titulo": "Bombilla Pico Loro MINI Lisa 16cm",
+    "categoria": "accesorios",
+    "descripcion": "Bombilla pico loro mini lisa de 16 cm.",
+    "precio": 5000,
+    "imagen": "accesorio.jpg"
+  },
+  {
+    "id": "P023",
+    "titulo": "Bombilla Pico Loro Cincelada 17cm",
+    "categoria": "accesorios",
+    "descripcion": "Bombilla pico loro cincelada de 17 cm.",
+    "precio": 6000,
+    "imagen": "accesorio.jpg"
+  },
+  {
+    "id": "P024",
+    "titulo": "Bombilla Bronce Pico Loro Lisa 17 cm",
+    "categoria": "accesorios",
+    "descripcion": "Bombilla de bronce pico loro lisa de 17 cm.",
+    "precio": 7000,
+    "imagen": "accesorio.jpg"
+  },
+  {
+    "id": "P033",
+    "titulo": "Matera Ecocuero",
+    "categoria": "accesorios",
+    "descripcion": "Matera de ecocuero.",
+    "precio": 16000,
+    "imagen": "accesorio.jpg"
+  },
+  {
+    "id": "P034",
+    "titulo": "Matero Ecocuero Doble",
+    "categoria": "accesorios",
+    "descripcion": "Matero doble de ecocuero.",
+    "precio": 15000,
+    "imagen": "accesorio.jpg"
+  },
+  {
+    "id": "P035",
+    "titulo": "Matera Ecocuero Premium",
+    "categoria": "accesorios",
+    "descripcion": "Matera premium de ecocuero.",
+    "precio": 18000,
+    "imagen": "accesorio.jpg"
+  },
+  {
+    "id": "P037",
+    "titulo": "Termo Total Black",
+    "categoria": "accesorios",
+    "descripcion": "Termo Total Black.",
+    "precio": 22000,
+    "imagen": "accesorio.jpg"
+  },
+  {
+    "id": "P038",
+    "titulo": "Termo Media Manija Acero",
+    "categoria": "accesorios",
+    "descripcion": "Termo de acero con media manija.",
+    "precio": 20000,
+    "imagen": "accesorio.jpg"
+  },
+  {
+    "id": "P043",
+    "titulo": "Yerbera Ecocuero",
+    "categoria": "accesorios",
+    "descripcion": "Yerbera de ecocuero.",
+    "precio": 5000,
+    "imagen": "accesorio.jpg"
+  },
+  {
+    "id": "P044",
+    "titulo": "Yerbera Cuero Gamuza",
+    "categoria": "accesorios",
+    "descripcion": "Yerbera de cuero gamuza.",
+    "precio": 8000,
+    "imagen": "accesorio.jpg"
+  },
+  {
+    "id": "P039",
+    "titulo": "Vaso Quencher",
+    "categoria": "bazar",
+    "descripcion": "Vaso tipo Quencher.",
+    "precio": 25000,
+    "imagen": "bazar.jpg"
+  },
+  {
+    "id": "P040",
+    "titulo": "Vaso Fernetero",
+    "categoria": "bazar",
+    "descripcion": "Vaso fernetero.",
+    "precio": 8000,
+    "imagen": "bazar.jpg"
+  }
+]

@@ -1,9 +1,5 @@
 const paginas = [
     {
-        titulo: "INICIO",
-        direccion: "../index.html"
-    },
-    {
         titulo: "MATES",
         direccion: "mates.html"
     },

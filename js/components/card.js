@@ -1,3 +1,4 @@
+
 function crearCard(producto) {
 
     return `
@@ -25,6 +26,10 @@ function crearCard(producto) {
 
                 </div>
 
+                <button class="btn-agregar" data-producto="${encodeURIComponent(JSON.stringify(producto))}">
+                    Agregar al carrito
+                </button>
+
             </div>
 
         </div>
@@ -34,37 +39,97 @@ function crearCard(producto) {
 
 function configurarCantidad() {
 
-    const botonRestar = document.querySelector(".btn-restar");
-    const botonSumar = document.querySelector(".btn-sumar");
-    const cantidad = document.querySelector(".cantidad-producto");
+    const botonesRestar = document.querySelectorAll(".btn-restar");
+    const botonesSumar = document.querySelectorAll(".btn-sumar");
+    const cantidades = document.querySelectorAll(".cantidad-producto");
 
-    let numero = 1;
+    botonesSumar.forEach(function(boton, indice) {
 
+        boton.addEventListener("click", function() {
 
-    botonSumar.addEventListener("click", function() {
+            let numero = Number(cantidades[indice].textContent);
 
-        numero++;
+            numero++;
 
-        cantidad.textContent = numero;
+            cantidades[indice].textContent = numero;
+
+        });
 
     });
 
 
-    botonRestar.addEventListener("click", function() {
+    botonesRestar.forEach(function(boton, indice) {
 
-        if (numero > 1) {
+        boton.addEventListener("click", function() {
 
-            numero--;
+            let numero = Number(cantidades[indice].textContent);
 
-            cantidad.textContent = numero;
+            if (numero > 1) {
 
-        }
+                numero--;
+
+                cantidades[indice].textContent = numero;
+
+            }
+
+        });
 
     });
 
 }
 
 
-export { configurarCantidad };
+function configurarCarrito() {
+
+    const botonesAgregar = document.querySelectorAll(".btn-agregar");
+    const cantidades = document.querySelectorAll(".cantidad-producto");
+
+    botonesAgregar.forEach(function(boton, indice) {
+
+        boton.addEventListener("click", function() {
+
+            const producto = JSON.parse(
+                decodeURIComponent(boton.dataset.producto)
+            );
+
+            const cantidad = Number(cantidades[indice].textContent);
+
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+            const productoExistente = carrito.find(function(item) {
+                return item.id === producto.id;
+            });
+
+            if (productoExistente) {
+
+                productoExistente.cantidad += cantidad;
+
+            } else {
+
+                carrito.push({
+                    ...producto,
+                    cantidad: cantidad
+                });
+
+            }
+
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+
+            // Reiniciar la cantidad
+            cantidades[indice].textContent = 1;
+
+            // Avisar que el carrito se actualizó
+            window.dispatchEvent(new Event("carritoActualizado"));
+
+            alert("Producto agregado al carrito");
+
+        });
+
+    });
+
+}
+
+
+export { configurarCantidad, configurarCarrito };
 
 export default crearCard;

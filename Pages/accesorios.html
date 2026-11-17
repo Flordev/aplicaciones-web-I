@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -33,7 +34,7 @@
          NAVBAR
          ========================= -->
 
-   <div id="navbar"></div>
+    <div id="navbar"></div>
 
 
     <!-- =========================
@@ -56,8 +57,6 @@
         <!-- PRODUCTOS -->
 
         <div class="productos" id="productos"></div>
-
-        </div>
 
     </section>
 
@@ -132,43 +131,71 @@
 
     </footer>
 
-    <script type="module">
 
-    import crearNavbar, { configurarLogout } from "../js/components/navbar.js";
-
-    const navbar = document.getElementById("navbar");
-
-    navbar.innerHTML = crearNavbar();
-
-    configurarLogout();
-
-</script>
-
-    <!-- CARD -->
+    <!-- =========================
+         NAVBAR DESDE JS
+         ========================= -->
 
     <script type="module">
 
-    import crearCard, { configurarCantidad } from "../js/components/card.js";
+        import crearNavbar, { configurarLogout } from "../js/components/navbar.js";
 
-    const productos = document.getElementById("productos");
+        const navbar = document.getElementById("navbar");
 
-    const producto = {
+        navbar.innerHTML = crearNavbar();
 
-        titulo: "Accesorio",
+        configurarLogout();
 
-        descripcion: "Accesorio para acompañar tu mate.",
+    </script>
 
-        precio: 10000,
 
-        imagen: "../assets/accesorio.jpg"
+    <!-- =========================
+         PRODUCTOS DESDE JSON
+         ========================= -->
 
-    };
+    <script type="module">
 
-    productos.innerHTML = crearCard(producto);
+        import crearCard, { configurarCantidad, configurarCarrito } from "../js/components/card.js";
 
-    configurarCantidad();
+        const contenedorProductos = document.getElementById("productos");
 
-</script>
+        // Obtener los productos del archivo JSON
+        fetch("../js/data/productos.json")
+
+            .then(response => response.json())
+
+            .then(data => {
+
+                // Filtrar únicamente los accesorios
+                const productosAccesorios = data.filter(producto => {
+                    return producto.categoria === "accesorios";
+                });
+
+                // Crear las tarjetas de productos
+                contenedorProductos.innerHTML = productosAccesorios.map(producto => {
+
+                    producto.imagen = "../assets/" + producto.imagen;
+
+                    return crearCard(producto);
+
+                }).join("");
+
+                // Configurar los botones
+                configurarCantidad();
+                configurarCarrito();
+
+            })
+
+            .catch(error => {
+
+                console.error("Error al cargar los productos:", error);
+
+                contenedorProductos.innerHTML = "<p>No se pudieron cargar los productos.</p>";
+
+            });
+
+    </script>
+
 
 </body>
 
